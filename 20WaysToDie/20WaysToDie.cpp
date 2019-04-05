@@ -17,7 +17,7 @@ void Game();
 int Choice();
 /*-----------------------------------------------------------------------*/
 // единственная выигрышная концовка (21 номер само собой)
-void WinTheGame();
+void WinTheGame(); // готова
 /*-----------------------------------------------------------------------*/
 // вот это я придумал конечно, да, вывод текста для каждой смерти отдельно, мб изменю потом
 void Death1(); // готова
@@ -30,13 +30,13 @@ void Death7(); // готова
 void Death8(); // готова
 void Death9(); // готова
 void Death10(); // готова
-void Death11();
-void Death12();
-void Death13();
-void Death14();
-void Death15();
-void Death16();
-void Death17();
+void Death11(); // готова
+void Death12(); // готова
+void Death13(); // готова
+void Death14(); // готова
+void Death15(); // готова
+void Death16(); // готова
+void Death17(); // готова
 void Death18();
 void Death19();
 void Death20();
@@ -58,12 +58,20 @@ void Scene13(); void subScene13_1(); void subScene13_2(); // готова
 void Scene14(); // готова
 void Scene15(); void subScene15_1(); void subScene15_2(); // готова
 void Scene16(); // готова
-void Scene17();
+void Scene17(); // готова
 void Scene18(); // готова
-void Scene19();
-void Scene20();
-void Scene21();
+void Scene19(); // готова
+void Scene20(); // готова
+void Scene21(); // готова
 void Scene22(); void subScene22_1(); void subScene22_2(); void subScene22_3(); void subScene22_4(); void subScene22_5(); void subScene22_6(); void subScene22_7(); void subScene22_8(); void subScene22_9(); void subScene22_10(); // готова
+void Scene23(); void subScene23(); // готова
+void Scene24(); void subScene24(); // готова
+void Scene25(); // готова
+void Scene26(); void subScene26(); // готова
+void Scene27(); // готова
+void Scene28();
+void Scene29(); 
+void Scene30(); void subScene30_1(); void subScene30_2();
 /*-----------------------------------------------------------------------*/
 
 int main()
@@ -102,7 +110,7 @@ void Endings_Output()
 		case 3:
 			if (endings[i] == 1)
 			{
-				cout << "4. Бесследно пропал после задержанием Росгвардией" << endl;
+				cout << "4. Бесследно пропал после задержания Росгвардией" << endl;
 			}
 			break;
 		case 4:
@@ -114,7 +122,7 @@ void Endings_Output()
 		case 5:
 			if (endings[i] == 1)
 			{
-				cout << "Умер в страшных мучениях, съев незнакомый тебе гриб" << endl;
+				cout << "Умер в страшных мучениях, съев незнакомый науке гриб" << endl;
 			}
 			break;
 		case 6:
@@ -139,6 +147,65 @@ void Endings_Output()
 			if (endings[i] == 1)
 			{
 				cout << "Замрглбрлглблен насмерть мурлоками" << endl;
+			}
+			break;
+		case 10:
+			if (endings[i] == 1)
+			{
+				cout << "Плохая концовка без причины, просто так. Смирись с этим" << endl;
+			}
+		case 11:
+			if (endings[i] == 1)
+			{
+				cout << "Умер чисто по-приколу, потому что автор так захотел" << endl;
+			}
+			break;
+		case 12:
+			if (endings[i] == 1)
+			{
+				cout << "Обидел мурлоков незнанием их языка" << endl;
+			}
+			break;
+		case 13:
+			if (endings[i] == 1)
+			{
+				cout << "Закосплеил Балрога" << endl;
+			}
+			break;
+		case 14:
+			if (endings[i] == 1)
+			{
+				cout << "Погиб из-за необдуманности своих действий" << endl;
+			}
+			break;
+		case 15:
+			if (endings[i] == 1)
+			{
+				cout << "Случайно раздавлен троллем" << endl;
+			}
+			break;
+		case 16:
+			if (endings[i] == 1)
+			{
+				cout << "Был до смерти затроллен троллем" << endl;
+			}
+			break;
+		case 17:
+			if (endings[i] == 1)
+			{
+				cout << "" << endl;
+			}
+			break;
+		case 18:
+			if (endings[i] == 1)
+			{
+				cout << "" << endl;
+			}
+			break;
+		case 19:
+			if (endings[i] == 1)
+			{
+				cout << "" << endl;
 			}
 			break;
 		case 20:
@@ -267,6 +334,76 @@ void Death10() // задействовано
 {
 	cout << "Ты так и не понял, получилось ли у тебя втереться в доверие к мурлокам, потому что тебя замрглбрлглблобили насмерть" << endl << endl;
 	endings[9] = 1;
+	Menu();
+}
+
+void Death11() // задействовано
+{
+	cout << "Игра закончена от недостатка в ней сюжета, мотивации, каких-либо действий и вообще чего бы то ни было" << endl << "Будем считать, что ты мертв" << endl << endl;
+	endings[10] = 1;
+	Menu();
+}
+
+void Death12() // задействовано
+{
+	cout << "Хотел нелепый конец игры? Ок, ты умер, потому что я так сказал." << endl << "И не спорь, я автор, мне виднее" << endl << endl;
+	endings[11] = 1;
+	Menu();
+}
+
+void Death13() // задействовано
+{
+	cout << "Ты хоть сам-то понял что сказал? Нет? А вот мурлоки поняли" << endl << "И походу обиделись, потому что далее ты обнаружил копье у себя в почке" << endl << endl;
+	endings[12] = 1;
+	Menu();
+}
+
+void Death14() // задействовано
+{
+	cout << "Ваша битва продолжалась очень долго и была нереально эпичной и зрелищной" << endl << "А потом вы оба плюхнулись на дно ямы" << endl << endl;
+	endings[13] = 1;
+	Menu();
+}
+
+void Death15() // задействовано
+{
+	cout << "Прыгая в люк, ты заметил что там была лестница, по которой можно было нормально спуститься" << endl << "Тебе просто напросто не хватило ловкости, чтобы схватиться за нее" << endl << "Короче, че я распинаюсь? Надо было думать головой, прежде чем прыгать во всякие люки" << endl << endl;
+	endings[14] = 1;
+	Menu();
+}
+
+void Death16() // задействовано
+{
+	cout << "Тролль заметил тебя только тогда, когда случайно раздавил тебя" << endl << "А ведь у него просто закончилась рабочая смена и он хотел пойти домой" << endl << endl;
+	endings[15] = 1;
+	Menu();
+}
+
+void Death17() // задействовано
+{
+	cout << "Ты взорвался от злости, так и не услышав еще одной обидной провокации от тролля" << endl << "Мораль: не тролль, незатроллирован будешь" << endl << endl;
+	endings[16] = 1;
+	Menu();
+}
+
+void Death18() 
+{
+	cout << "" << endl << endl;
+	endings[17] = 1;
+	Menu();
+}
+
+void Death19()
+{
+	cout << "" << endl << endl;
+	endings[18] = 1;
+	Menu();
+}
+
+void Death20()
+{
+	cout << "" << endl << endl;
+	endings[19] = 1;
 	Menu();
 }
 
@@ -1104,19 +1241,19 @@ void Scene16()
 void Scene17()
 {
 	cout << "Ты пришел в прекраснейшую пещеру, с прудом посередине, в котором плавают три прелестные русалки" << endl << "Они зовут тебя к себе!" << endl << "Но сзади виднеется проход куда-то еще" << endl;
-	cout << "1. Мама учила тебя не разговаривать в незнакомыми людьми и нелюдьми, пройти дальше" << endl;
+	cout << "1. Мама учила тебя не разговаривать с незнакомыми людьми и нелюдьми, пройти дальше" << endl;
 	cout << "2. Присоединиться к русалкам" << endl;
-	cout << "3. Спросить, как отсюда выйти" << endl;
+	cout << "3. Показать им средний палец и вернуться обратно" << endl;
 	switch (Choice())
 	{
 	case 1:
-
+		Scene23();
 		break;
 	case 2:
 		Death8();
 		break;
 	case 3:
-
+		Scene14();
 		break;
 	}
 }
@@ -1153,7 +1290,7 @@ void Scene19()
 		subScene15_2();
 		break;
 	case 2:
-
+		Scene25();
 		break;
 	case 3:
 		Death9();
@@ -1170,7 +1307,7 @@ void Scene20()
 	switch (Choice())
 	{
 	case 1:
-
+		Death13();
 		break;
 	case 2:
 		Death10();
@@ -1193,10 +1330,10 @@ void Scene21()
 		subScene15_2();
 		break;
 	case 2:
-
+		Scene27();
 		break;
 	case 3:
-
+		Scene26();
 		break;
 	}
 }
@@ -1420,6 +1557,267 @@ void subScene22_10()
 		break;
 	}
 }
+
+void Scene23()
+{
+	cout << "Ты идешь вдоль узкой пещеры, а потом оказываешься в полностью белой комнате" << endl << "В ней абсолютно ничего нет, кроме твоего присутствия" << endl;
+	cout << "1. Ничего не делать" << endl;
+	cout << "2. Проявить полную апатию к ситуации" << endl;
+	cout << "3. Сделать что-нибудь" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Death11();
+		break;
+	case 2:
+		Death11();
+		break;
+	case 3:
+		subScene23();
+		break;
+	}
+}
+
+void subScene23()
+{
+	cout << "Ты встал на одну ногу, закинул руки за голову" << endl << "В таком положении ты спел Smells Like Teen Spirit на татарском языке" << endl << "Потом, крикнув как чайка, упал на живот и стал кататься по полу" << endl << "Неожиданно, но это сработало - в белой стене открылся проход дальше " << endl;
+	cout << "1. Идти в проход" << endl;
+	cout << "2. В проход идти" << endl;
+	cout << "3. Проход идти в" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Scene24();
+		break;
+	case 2:
+		Scene24();
+		break;
+	case 3:
+		Scene24();
+		break;
+	}
+}
+
+void Scene24()
+{
+	cout << "Ты оказался в очередной нелепой комнате и тебе нужно выполнить одно из нелепых действий, чтобы очень нелепо закончить игру" << endl;
+	cout << "1. Первое действие" << endl;
+	cout << "2. Действие 2" << endl;
+	cout << "3. Action №3" << endl;
+	switch (Choice())
+	{
+	case 1:
+		subScene24();
+		break;
+	case 2:
+		Death12();
+		break;
+	case 3:
+		subScene24();
+		break;
+	}
+}
+
+void subScene24()
+{
+	cout << "Ха, лох! Ты не угадал с действием! Вот и отправляйся на самое начало квеста!" << endl;
+	cout << "1. Всм" << endl;
+	cout << "2. Эй, это нечестно!" << endl;
+	cout << "3. Автор, ты сука" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Scene1();
+		break;
+	case 2:
+		Scene1();
+		break;
+	case 3:
+		Scene1();
+		break;
+	}
+}
+
+void Scene25()
+{
+	cout << "Годзилла немного привстала, а затем вздохнула и снова заснула" << endl << "Рядом с ней ты видишь люк" << endl;
+	cout << "1. Прыгнуть в люк" << endl;
+	cout << "2. Аккуратно спутиться в люк" << endl;
+	cout << "3. Ну нафиг, пойдем обратно" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Death15();
+		break;
+	case 2:
+		Scene29();
+		break;
+	case 3:
+		subScene15_2();
+		break;
+	}
+}
+
+void Scene26()
+{
+	cout << "Ты кидаешься на мужика и под вами проваливается мост" << endl << "\"Бегите, глупцы...\" - сказал он, перед тем, как вы оба начали падать" << endl;
+	cout << "1. Удар в живот" << endl;
+	cout << "2. Удар в голову" << endl;
+	cout << "3. Поговорить о ситуации" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Death14();
+		break;
+	case 2:
+		Death14();
+		break;
+	case 3:
+		subScene26();
+		break;
+	}
+}
+
+void subScene26()
+{
+	cout << "\"Немного поздновато ты лезешь с разговорами, мы падаем, если что\"" << endl << "И вообще, бейся со мной!" << endl;
+	cout << "1. Заломать руки" << endl;
+	cout << "2. Сделать крапиву" << endl;
+	cout << "3. Ткнуть в глаз" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Death14();
+		break;
+	case 2:
+		Death14();
+		break;
+	case 3:
+		Death14();
+		break;
+	}
+}
+
+void Scene27()
+{
+	cout << "Тебе удалось спокойно пройти мост" << endl << "\"Эй, чувак, ну не позорь меня, я же сказал: ты не пройдешь\"" << endl;
+	cout << "1. Не моя проблема" << endl;
+	cout << "2. Проигнорить и пройти дальше" << endl;
+	cout << "3. Пройти дальше с крутым видом" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Scene28();
+		break;
+	case 2:
+		Scene28();
+		break;
+	case 3:
+		Scene28();
+		break;
+	}
+}
+
+void Scene28()
+{
+	cout << "Перед тобой три двери, куда пойдешь?" << endl;
+	cout << "1. В первую" << endl;
+	cout << "2. Во вторую" << endl;
+	cout << "3. В третью" << endl;
+	switch (Choice())
+	{
+	case 1:
+
+		break;
+	case 2:
+
+		break;
+	case 3:
+
+		break;
+	}
+}
+
+void Scene29()
+{
+	cout << "Ты спустился в люк и немного прошел по коридору, прежде чем встретил огромного тролля с дубиной" << endl << "Тролль стоит лицом к стене, так что он тебя сейчас точно не заметил" << endl;
+	cout << "1. Тупо пройти мимо" << endl;
+	cout << "2. Потроллить тролля" << endl;
+	cout << "3. Проползти мимо тролля, как шпион" << endl;
+	switch (Choice())
+	{
+	case 1:
+
+		break;
+	case 2:
+		Scene30();
+		break;
+	case 3:
+		Death16();
+		break;
+	}
+}
+
+void Scene30()
+{
+	cout << "\"Ахахахах, ну ты и дурачок, у вас в семье все такие же тупые?\"" << endl << "\"Особенно, я думаю, мама твоя.\" - на удивление членораздельно прорычал тролль" << endl;
+	cout << "1. Эй, маму не трожь!" << endl;
+	cout << "2. Ты себя-то видел, сверхразум?!?!" << endl;
+	cout << "3. Проигнорить и пойти дальше" << endl;
+	switch (Choice())
+	{
+	case 1:
+		subScene30_1();
+		break;
+	case 2:
+		subScene30_1();
+		break;
+	case 3:
+
+		break;
+	}
+}
+
+void subScene30_1()
+{
+	cout << "\"Ахахахаха, лох интернетный, что в реальной жизни ничего не можешь сделать?\"" << endl;
+	cout << "1. Прекрати быстро!" << endl;
+	cout << "2. Ну хватит уже!" << endl;
+	cout << "3. Проигнорить и пойти дальше" << endl;
+	switch (Choice())
+	{
+	case 1:
+		subScene30_2();
+		break;
+	case 2:
+		subScene30_2();
+		break;
+	case 3:
+
+		break;
+	}
+}
+
+void subScene30_2()
+{
+	cout << "\"Шо, обидна да? Обидна? даб даб даб я\"" << endl;
+	cout << "1. Заплакать" << endl;
+	cout << "2. Обозвать тролля всеми известными тебе ругательствами" << endl;
+	cout << "3. Проигнорить и пойти дальше" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Death17();
+		break;
+	case 2:
+		Death17();
+		break;
+	case 3:
+
+		break;
+	}
+}
+
 /*
 	cout << "" << endl;
 	cout << "1. " << endl;
