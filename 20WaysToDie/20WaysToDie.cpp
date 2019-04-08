@@ -1,5 +1,14 @@
+/*
+    Текстовый квест 20WaysToDie
+	Учебный проект 
+	(c) Брянцев Всеволод
+	(c) Компьютерная академия ШАГ . Воронеж
+	Версия 1.0 (08.04.2019)
+*/
+
 #include "pch.h"
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 int endings[21];
@@ -37,9 +46,9 @@ void Death14(); // готова
 void Death15(); // готова
 void Death16(); // готова
 void Death17(); // готова
-void Death18();
-void Death19();
-void Death20();
+void Death18(); // готова
+void Death19(); // готова
+void Death20(); // готова
 /*-----------------------------------------------------------------------*/
 // естессна все сцены тоже будут написаны отдельно, какой я непредсказуемый
 void Scene1(); void subScene1(); // готова
@@ -54,7 +63,7 @@ void Scene9(); void subScene9_1(); void subScene9_2(); void subScene9_3();  void
 void Scene10(); void subScene10(); // готова
 void Scene11(); void subScene11_1(); void subScene11_2(); void subScene11_3(); // готова
 void Scene12(); void subScene12_1(); void subScene12_2(); void subScene12_3(); void subScene12_4(); // готова
-void Scene13(); void subScene13_1(); void subScene13_2(); // готова
+void Scene13(); void subScene13_1(); void subScene13_2(); void subScene13_3();// готова
 void Scene14(); // готова
 void Scene15(); void subScene15_1(); void subScene15_2(); // готова
 void Scene16(); // готова
@@ -69,14 +78,20 @@ void Scene24(); void subScene24(); // готова
 void Scene25(); // готова
 void Scene26(); void subScene26(); // готова
 void Scene27(); // готова
-void Scene28();
-void Scene29(); 
-void Scene30(); void subScene30_1(); void subScene30_2();
+void Scene28(); // готова
+void Scene29(); // готова
+void Scene30(); void subScene30_1(); void subScene30_2(); // готова
+void Scene31(); // готова
+void Scene32(); // готова
+void Scene33(); // готова
 /*-----------------------------------------------------------------------*/
 
 int main()
 {
 	setlocale(LC_ALL, "rus");
+	cout << "Текстовый квест 20WaysToDie" << endl << "(c) Брянцев Всеволод" << endl << "(c) Компьютерная академия ШАГ . Воронеж" << endl << "Версия 1.0 (08.04.2019)" << endl << endl;
+	system("pause");
+	system("cls");
 	Menu();
 }
 
@@ -193,19 +208,19 @@ void Endings_Output()
 		case 17:
 			if (endings[i] == 1)
 			{
-				cout << "" << endl;
+				cout << "Пожизненно забанен за читы" << endl;
 			}
 			break;
 		case 18:
 			if (endings[i] == 1)
 			{
-				cout << "" << endl;
+				cout << "Неудачно бустанул компьютер" << endl;
 			}
 			break;
 		case 19:
 			if (endings[i] == 1)
 			{
-				cout << "" << endl;
+				cout << "Умер, потому что не смог отгадать детскую загадку" << endl;
 			}
 			break;
 		case 20:
@@ -237,6 +252,7 @@ void Menu()
 	cout << "Выбор действия (1, 2 или 3): ";
 	cin >> menu_choice;
 	cout << endl;
+	system("cls");
 	switch (menu_choice)
 	{
 	case 1:
@@ -386,23 +402,23 @@ void Death17() // задействовано
 	Menu();
 }
 
-void Death18() 
+void Death18() // задействовано
 {
-	cout << "" << endl << endl;
+	cout << "По чисто субъективному мнению автора (шучу, оно объективное), юзать читы в многопользовательских играх - значит быть криворуким инвалидом" << endl << "Автор отправляет тебя в пожизненный бан в реальной жизни" << endl << endl;
 	endings[17] = 1;
 	Menu();
 }
 
-void Death19()
+void Death19() // задействовано
 {
-	cout << "" << endl << endl;
+	cout << "Чет мне кажется, что так делать не нужно было" << endl << "Компьютер реально начал работать быстрее, но взорвался от перегрева. И ты вместе с ним" << endl << endl;
 	endings[18] = 1;
 	Menu();
 }
 
-void Death20()
+void Death20() // задействовано
 {
-	cout << "" << endl << endl;
+	cout << "Все как и договаривались: ты мертв" << endl << endl;
 	endings[19] = 1;
 	Menu();
 }
@@ -1727,13 +1743,13 @@ void Scene28()
 	switch (Choice())
 	{
 	case 1:
-
+		Scene31();
 		break;
 	case 2:
-
+		Scene31();
 		break;
 	case 3:
-
+		Scene31();
 		break;
 	}
 }
@@ -1747,7 +1763,7 @@ void Scene29()
 	switch (Choice())
 	{
 	case 1:
-
+		Scene33();
 		break;
 	case 2:
 		Scene30();
@@ -1773,7 +1789,7 @@ void Scene30()
 		subScene30_1();
 		break;
 	case 3:
-
+		Scene33();
 		break;
 	}
 }
@@ -1793,7 +1809,7 @@ void subScene30_1()
 		subScene30_2();
 		break;
 	case 3:
-
+		Scene33();
 		break;
 	}
 }
@@ -1813,26 +1829,68 @@ void subScene30_2()
 		Death17();
 		break;
 	case 3:
-
+		Scene33();
 		break;
 	}
 }
 
-/*
-	cout << "" << endl;
-	cout << "1. " << endl;
-	cout << "2. " << endl;
-	cout << "3. " << endl;
+
+void Scene31()
+{
+	cout << "Пройдя через дверь, ты заметил, что все три двери вели в одну комнату" << endl << "Это было сделано, чтобы продемонстрировать тебе иллюзию выбора в этой игре" << endl << "Посередине комнаты стоит компьютер, на нем горит надпись \"Выиграй!\"" << endl << "Сев за комп, ты понял что игра, где надо выиграть - это популярная нынче Си Эс Жо" << endl;
+	cout << "1. Заюзать читы" << endl;
+	cout << "2. Разнести всех тупа на скиллухе" << endl;
+	cout << "3. Долбануть системник кулаком для лучшей работы" << endl;
 	switch (Choice())
 	{
 	case 1:
-
+		Death18();
 		break;
 	case 2:
-
+		Scene32();
 		break;
 	case 3:
-
+		Death19();
 		break;
 	}
-*/
+}
+
+void Scene32()
+{
+	cout << "Ты тупа унизил всех и затащил игру" << endl << "Вдруг в стене открылась дверь на улицу, а на компе высветилась надпись:" << endl <<"\"Красава, я думаю, что теперь ты можешь быть свободным\"" << endl << "Что нужно сказать, когда прошел игру?" << endl;
+	cout << "1. GGWP" << endl;
+	cout << "2. Спасибо за игру" << endl;
+	cout << "3. Ez" << endl;
+	switch (Choice())
+	{
+	case 1:
+		void WinTheGame();
+		break;
+	case 2:
+		void WinTheGame();
+		break;
+	case 3:
+		void WinTheGame();
+		break;
+	}
+}
+
+void Scene33()
+{
+	cout << "Ты проигнорил тролля и прошел мимо" << endl << "Чуть дальше ты увидел камень с надписями, на нем написано:" << endl << "\"Радуйся ведь это последнее испытание. Тебе необходимо отгадать загадку" << endl << "Правила просты: угадаешь - выйдешь наружу, не угадаешь - умрешь" << endl << "Текст загадки: Что нужно делать, когда видишь зелёного человечка?\"" << endl;
+	cout << "1. Бежать" << endl;
+	cout << "2. Просить забрать тебя из России" << endl;
+	cout << "3. Переходить дорогу" << endl;
+	switch (Choice())
+	{
+	case 1:
+		Death20();
+		break;
+	case 2:
+		Death20();
+		break;
+	case 3:
+		WinTheGame();
+		break;
+	}
+}
